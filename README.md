@@ -22,4 +22,4 @@
 - Have fun and explore further! If your signed URL expires, you can go to the web interface to retrieve a new one. 
 
 ## Shutting Down 
-- Click "Quit" in the browser window containing the list of files to shut down the Jupyter notebook server and exit the Conda environment.. 
+- Click "Quit" in the browser window containing the list of files to shut down the Jupyter notebook server and exit the Conda environment. 
