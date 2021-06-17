@@ -1,7 +1,7 @@
 import statistics
 import numpy as np
 import utm_zone
-import gdal
+from osgeo import gdal
 import rasterio
 from rasterio.plot import show_hist, show
 import matplotlib.pyplot as plt
