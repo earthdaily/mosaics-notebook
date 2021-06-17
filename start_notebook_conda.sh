@@ -1,4 +1,4 @@
 conda env create -f environment.yml 
-conda activate notebooks
+conda activate earthdaily
 jupyter notebook
 conda deactivate

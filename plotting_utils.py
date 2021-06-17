@@ -1,6 +1,6 @@
 import statistics
+import math
 import numpy as np
-import utm_zone
 from osgeo import gdal
 import rasterio
 from rasterio.plot import show_hist, show
@@ -56,9 +56,18 @@ class PreviewMap:
         """
 
         geo_aoi = self.get_selected_lat_lon_corners()
-        zone = utm_zone.epsg([statistics.mean([geo_aoi['ul_lng'], geo_aoi['lr_lng']]), 
-                              statistics.mean([geo_aoi['ul_lat'], geo_aoi['lr_lat']])])
-        return f'EPSG:{zone}'
+        lon = statistics.mean([geo_aoi['ul_lng'], geo_aoi['lr_lng']])
+        lat = statistics.mean([geo_aoi['ul_lat'], geo_aoi['lr_lat']])
+        
+        # Calculation from https://stackoverflow.com/a/40140326/4556479 
+        utm_band = str((math.floor((lon + 180) / 6 ) % 60) + 1)
+        if len(utm_band) == 1:
+            utm_band = '0'+utm_band
+        if lat >= 0:
+            epsg_code = '326' + utm_band
+            return f'EPSG:{epsg_code}'
+        epsg_code = '327' + utm_band        
+        return f'EPSG:{epsg_code}'
 
         
     def get_selected_lat_lon_corners(self):
