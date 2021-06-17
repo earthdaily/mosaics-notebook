@@ -1,14 +1,16 @@
 # EarthDaily Mosaic Usage Example
 
 ## Pre-requisites
-- Anaconda must be installed. If you do not already have it installed, download and run the installer for your platform at https://www.anaconda.com/products/individual#Downloads
+- One of the following must be installed: 
+  - Anaconda. If you do not already have it installed, download and run the installer for your platform at https://www.anaconda.com/products/individual#Downloads
+  - OR
+  - Docker. If you do not already have it installed, download and run the installer for your platform at https://www.docker.com/products/docker-desktop
+- If you do not know which to install, we suggest Anaconda. 
 - Git must be installed. If you do not already have it installed, download and run the installer for your platform at http://git-scm.com/download 
 
-## Getting Started
-
-
+## Getting Started (Anaconda)
 - Open your Anaconda shell: 
-  - For OSX/Linux: Open your terminal
+  - For OSX/Linux: `conda init bash`
   - For Windows: Open Anaconda Powershell Prompt
 - Clone this repository: 
   - `git clone https://<username>:<password>@github.com/earthdaily/mosaics-notebook.git`
@@ -23,3 +25,7 @@
 
 ## Shutting Down 
 - Click "Quit" in the browser window containing the list of files to shut down the Jupyter notebook server and exit the Conda environment. 
+
+## Using Docker 
+- You may also build the environment and launch the Jupyter notebook server within Docker: 
+  - `source start_notebook_docker.sh`
