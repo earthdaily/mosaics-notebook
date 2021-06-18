@@ -1,5 +1,7 @@
 # EarthDaily Mosaic Usage Example
 
+This notebook demonstrates how to access and get started using EarthDaily's EarthMosaics. For more information about the product and service, see https://mosaics-preview.earthdaily.com/home/
+
 ## Pre-requisites
 - One of the following must be installed: 
   - Anaconda. If you do not already have it installed, download and run the installer for your platform at https://www.anaconda.com/products/individual#Downloads
