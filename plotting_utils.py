@@ -7,6 +7,30 @@ from rasterio.plot import show_hist, show
 import matplotlib.pyplot as plt
 from ipyleaflet import Map, Marker, basemaps, basemap_to_tiles, TileLayer, DrawControl, FullScreenControl, GeoJSON, Polygon
 
+MAP_BOUNDS = [(48.39,-124.90),
+(40.39,-124.60),
+(38.63,-123.70),
+(34.35,-121.04),
+(32.46,-117.41),
+(32.72,-114.66),
+(34.25,-114.02),
+(35.12,-114.68),
+(39.02,-119.91),
+(41.96,-119.97),
+(41.95,-116.89),
+(43.86,-116.94),
+(44.20,-116.77),
+(44.48,-117.10),
+(45.78,-116.31),
+(46.10,-116.79),
+(49.01,-116.79),
+(49.02,-123.37),
+(48.81,-123.03),
+(48.70,-123.37),
+(48.31,-123.24),
+(48.28,-123.77),
+(48.43,-124.80),
+(48.39,-124.90)]
 
 def plot_data(file_path, band_labels, show_bands, show_percentile=95):     
     """
